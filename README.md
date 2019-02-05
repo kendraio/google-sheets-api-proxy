@@ -29,7 +29,7 @@ via the API. For example:
 
 Download from GitHub and install using NPM:
 
-    git clone https://github.com/kendraio/kendraio-mock-api
+    git clone https://github.com/kendraio/kendraio-mock-api.git
     npm install
 
 Rename the provided `.env.example` file to include the spreadsheet ID 
