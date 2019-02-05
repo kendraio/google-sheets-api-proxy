@@ -1,0 +1,30 @@
+{
+  "name": "kendraio-mock-api",
+  "version": "0.1.0",
+  "description": "Generate a mock API from a Google Spreadsheet for dev/testing",
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "main": "lib/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/dotenv": "^6.1.0",
+    "@types/express": "^4.16.1",
+    "@types/node": "^10.12.21",
+    "@types/slug": "^0.9.0",
+    "nodemon": "^1.18.9",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "googleapis": "^37.1.0",
+    "slug": "^0.9.3"
+  }
+}
