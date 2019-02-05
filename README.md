@@ -32,7 +32,7 @@ Download from GitHub and install using NPM:
     git clone https://github.com/kendraio/kendraio-mock-api.git
     npm install
 
-Rename the provided `.env.example` file to include the spreadsheet ID 
+Rename the provided `.env.example` file to `.env` and add the spreadsheet ID 
 and API Key. You can find the spreadsheet ID by looking at the URL
 of your sheet on Google Docs. It will look like this:
 
