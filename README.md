@@ -69,3 +69,12 @@ into JavaScript.
     
 You can then start the server with `npm run start` or deploy the
 built JavaScript version from the generated `dist` folder.
+First setup Now.sh with the correct value for the secret key:
+
+    now secret add sheets-key "ENTER YOUR SECRET HERE!"
+
+Then deploy:
+
+    now
+
+The CLI command will show the endpoint URL.
