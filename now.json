@@ -7,6 +7,9 @@
       "use": "@now/node-server"
     }
   ],
+  "routes": [
+    { "src": "/.*", "dest": "/dist/index.js" }
+  ],
   "env": {
     "SHEETS_KEY": "@sheets-key",
     "SHEETS_ID": "1FNFdfnfQqz81igvokIwxdcOoK59NRSZ00KAm0xyIVE8"
