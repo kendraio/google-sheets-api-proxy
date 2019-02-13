@@ -1,4 +1,4 @@
-# Mock API
+# Google Sheets API Proxy
 
 Convert a Google Docs Spreadsheet into an API for development or testing
 purposes. 
