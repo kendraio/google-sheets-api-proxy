@@ -29,7 +29,7 @@ via the API. For example:
 
 Download from GitHub and install using NPM:
 
-    git clone https://github.com/kendraio/kendraio-mock-api.git
+    git clone https://github.com/kendraio/google-sheets-api-proxy.git
     npm install
 
 Add the spreadsheet ID into the `now.json` configuration file. 
