@@ -26,7 +26,7 @@ app.get('/:table', (req, res) => {
 
 app.get('/:table/:id', (req, res) => {
   sheet.getItem(req.params.table, +req.params.id).then(data => {
-    res.json(data);
+    res.json({ id: +req.params.id, ...data });
   }).catch((err) => {
     console.log(err);
     res.status(404).send(`Not found ${err.message}`);
