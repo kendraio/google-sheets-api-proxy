@@ -1,6 +1,5 @@
 // Load configuration from .env
-import * as dotenv from "dotenv";
-dotenv.config({path: ".env"});
+require('now-env');
 
 // Start server
 import { app } from "./app";

@@ -32,8 +32,8 @@ Download from GitHub and install using NPM:
     git clone https://github.com/kendraio/kendraio-mock-api.git
     npm install
 
-Rename the provided `.env.example` file to `.env` and add the spreadsheet ID 
-and API Key. You can find the spreadsheet ID by looking at the URL
+Add the spreadsheet ID into the `now.json` configuration file. 
+You can find the spreadsheet ID by looking at the URL
 of your sheet on Google Docs. It will look like this:
 
     https://docs.google.com/spreadsheets/d/[SPREADSHEET-ID]/edit
@@ -41,10 +41,18 @@ of your sheet on Google Docs. It will look like this:
 You need to use the value from `[SPREADSHEET-ID]` in the URL and
 enter it into the `.env` file as the `SHEETS_ID`.
 
-You will also need to enter an API key as `SHEETS_KEY` into `.env`.
+Create a file called `now-secrets.json` as documented [here](https://github.com/zeit/now-env)
+You will need to enter an API key as `SHEETS_KEY` into `now-secrets.json`.
 You can find this by going to the 
 [Google Cloud Platform Console](https://console.cloud.google.com/apis/credentials)
 and registering an app. Generate an API key and enable the Google Sheets API.
+Create the `now-secrets.json` file and enter:
+
+```
+{
+  "@sheets-key": "ENTER KEY HERE!"
+}
+```
 
 After you have configured `.env` you can run the server locally using 
 the provided NPM script:
@@ -61,5 +69,3 @@ into JavaScript.
     
 You can then start the server with `npm run start` or deploy the
 built JavaScript version from the generated `dist` folder.
-
-TODO: Add documentation on deploying to "serverless" provider.
