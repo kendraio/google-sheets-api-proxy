@@ -1,4 +1,12 @@
 {
+  "name": "google-sheets-api-proxy",
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/index.js",
+      "use": "@now/node-server"
+    }
+  ],
   "env": {
     "SHEETS_KEY": "@sheets-key",
     "SHEETS_ID": "1FNFdfnfQqz81igvokIwxdcOoK59NRSZ00KAm0xyIVE8"
