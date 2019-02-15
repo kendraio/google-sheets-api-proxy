@@ -70,4 +70,20 @@ export class SheetDB {
       });
     }));
   }
+
+  getAll(sheetId) {
+    return new Promise((resolve, reject) => {
+      this.sheets.spreadsheets.values.get({
+        spreadsheetId: this.spreadsheetId,
+        range: `${sheetId}`
+      }, (err, response) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        const { data: { values: [ header, ...data ] }} = response;
+        resolve({ header, data });
+      });
+    });
+  }
 }

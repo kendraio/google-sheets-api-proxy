@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
   });
 });
 
+
 app.get('/:table', (req, res) => {
   sheet.listItems(req.params.table).then(items => {
     res.json(items);
@@ -22,6 +23,15 @@ app.get('/:table', (req, res) => {
     console.log(err);
     res.status(404).send(`Not found ${err.message}`);
   });
+});
+
+app.get('/:table/all', (req, res) => {
+  sheet.getAll(req.params.table).then(result => {
+    res.json(result);
+  }).catch((err) => {
+    console.log(err);
+    res.status(404).send(`Not found ${err.message}`);
+  })
 });
 
 app.get('/:table/:id', (req, res) => {
