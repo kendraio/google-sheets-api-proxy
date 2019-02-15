@@ -1,8 +1,9 @@
 import * as express from 'express';
-import * as bodyParser from "body-parser";
+import * as cors from 'cors';
 import { SheetDB } from "./sheet-db";
 
 export const app = express();
+app.use(cors());
 
 const sheet = new SheetDB(process.env.SHEETS_ID, process.env.SHEETS_KEY);
 
@@ -42,5 +43,3 @@ app.get('/:table/:id', (req, res) => {
     res.status(404).send(`Not found ${err.message}`);
   });
 });
-
-app.use(bodyParser.json());
