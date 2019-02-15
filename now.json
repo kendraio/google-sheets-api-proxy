@@ -13,5 +13,8 @@
   "env": {
     "SHEETS_KEY": "@sheets-key",
     "SHEETS_ID": "1FNFdfnfQqz81igvokIwxdcOoK59NRSZ00KAm0xyIVE8"
-  }
+  },
+  "alias": [
+    "google-sheets-api-proxy"
+  ]
 }
